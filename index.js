@@ -1,9 +1,10 @@
-const hoverEl = document.querySelector('#text');
-const hoverEl2 = document.querySelector('#ghost');
+const myInput = document.querySelector("#input");
+const message = document.querySelector("#message");
 
-hoverEl.addEventListener("mouseover", function(){
-    hoverEl2.innerHTML = "Invisible Text"  
-})
-hoverEl.addEventListener("mouseout", function(){
-    hoverEl2.innerHTML = " "  
-  })
+myInput.onfocus = () => {
+	message.style.display = "block";
+}
+
+myInput.onblur = () => {
+    message.style.display = "none";
+}
